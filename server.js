@@ -23,7 +23,7 @@ app.post("/addUser", dbController.createUser, (req, res) => {
 	res.sendFile(path.join(__dirname + '/items.html'));
 });
 
-app.post("/addItem", dbController.createItem)
+app.post("/addItem", dbController.createItem, dbController.getAllItems);
 
 database.get('/', (req, res) => {
  console.log('DATABSE GET IS WORKING')
