@@ -1,0 +1,57 @@
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>Fame's Store</title>
+ <!-- comment out the below link tags when bundling styles with webpack -->
+ <!-- <link rel="stylesheet" href="client/stylesheets/styles.css"> -->
+ <style>
+	body {
+			  background-color: powderblue;
+		 }
+	h1   {
+			  color: blue;
+		 }
+	form {
+			  margin: 0 auto;
+			  width: 350px;
+			  padding: 1em;
+			  border: 5px solid #CCC;
+			  border-radius: 1em;
+		  }
+	label {
+			  display: inline-block;
+			  padding: 1em;
+			  width: 100px;
+		  }
+</style>
+</head>
+<body>
+ <h1><center>Fame's Store</center></h1>
+ <div id="root">
+	 <form method="POST" action="/addUser">
+		 <label>CREATE USER</label><br>
+		 <div>
+		    <label for="name">NAME:</label>
+		    <input type="text" name="userName">
+		  </div>
+		 <div>
+		    <label for="description">DESCRIPTION:</label>
+		    <input type="text" name="userDescription">
+		  </div>
+		 <div>
+		    <label for="password">PASSWORD:</label>
+		    <input type="text" name="userPassword">
+		  </div>
+		   <input type="submit" value="ADD USER">
+	</form>
+ </div>
+
+
+ <!-- bundle for gulp build -->
+<!--  <script src="build/bundle.js"></script> -->
+
+ <!-- uncomment below and comment out the tag above for webpack challenge -->
+  <!--<script src="build/webpack-bundle.js"></script>-->
+
+</body>
+</html>
