@@ -1,19 +1,37 @@
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Fame's Store</title>
-  <!-- comment out the below link tags when bundling styles with webpack -->
-  <!-- <link rel="stylesheet" href="client/stylesheets/styles.css"> -->
+ <meta charset="UTF-8">
+ <title>Fame's Store</title>
+ <!-- comment out the below link tags when bundling styles with webpack -->
+ <!-- <link rel="stylesheet" href="client/stylesheets/styles.css"> -->
 </head>
 <body>
-  <h1>Fame's Store</h1>
-  <div id="root"></div>
+ <h1>Fame's Store</h1>
+ <div id="root">
+	 <form method="POST" action="/addUser">
+		 <label>CREATE USER</label><br>
+		 <div>
+		    <label for="name">NAME:</label>
+		    <input type="text" name="userName">
+		  </div>
+		 <div>
+		    <label for="description">DESCRIPTION:</label>
+		    <input type="text" name="userDescription">
+		  </div>
+		 <div>
+		    <label for="password">PASSWORD:</label>
+		    <input type="text" name="userPassword">
+		  </div>
+		   <input type="submit" value="ADD USER">
+	</form>
+ </div>
 
-  <!-- bundle for gulp build -->
+
+ <!-- bundle for gulp build -->
 <!--  <script src="build/bundle.js"></script> -->
 
-  <!-- uncomment below and comment out the tag above for webpack challenge -->
-   <script src="build/webpack-bundle.js"></script>
+ <!-- uncomment below and comment out the tag above for webpack challenge -->
+  <!--<script src="build/webpack-bundle.js"></script>-->
 
 </body>
 </html>
