@@ -1,16 +1,17 @@
 var path = require('path');
+const webpack = require('webpack')
 
 
 module.exports = {
-  entry:'./client/index.js',
+  entry: './client/index.js',
   output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'webpack-bundle.js'
+    path: path.resolve(__dirname, 'client'),
+    filename: 'bundle.js'
   },
-
+  
   module: {
 
-    rules: [
+    loaders: [
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
@@ -25,7 +26,7 @@ module.exports = {
         test: /\.scss$/,
         loader: "style-loader!css-loader!sass-loader",
 
-      }
+      },      
     ]
   }
 };
