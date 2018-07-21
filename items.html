@@ -4,9 +4,29 @@
  <title>Fame's Store</title>
  <!-- comment out the below link tags when bundling styles with webpack -->
  <!-- <link rel="stylesheet" href="client/stylesheets/styles.css"> -->
+ <style>
+	body {
+			  background-color: powderblue;
+		 }
+	h1   {
+			  color: blue;
+		 }
+	form {
+			  margin: 0 auto;
+			  width: 350px;
+			  padding: 1em;
+			  border: 5px solid #CCC;
+			  border-radius: 1em;
+		  }
+	label {
+			  display: inline-block;
+			  padding: 1em;
+			  width: 100px;
+		  }
+</style>
 </head>
 <body>
- <h1>Fame's Store</h1>
+ <h1><center>Fame's Store</center></h1>
  <div id="root">
 	 <form method="POST" action="/addItem">
 		 <label>SELL ITEM</label><br>
@@ -34,7 +54,7 @@
 		    <label for="condition">CONDITION:</label>
 		    <input type="text" name="itemCondition">
 		  </div>
-		   <input type="submit" value="ADD USER">
+		   <input type="submit" value="ADD ITEM">
 	</form>
  </div>
 

@@ -70,9 +70,27 @@ let dbController = {
 		    console.log(error)
 		  })
 		  next();
-	}
-}
+	},
 
+	getAllItems: (req, res) => {
+		console.log("in the GEETTTT", req.body)
+		//let items = Item.findAll({})
+		// 	, (err, data) => {
+		//console.log("ITEMSSS", Item.findAll({}));
+		sequelize.query('SELECT * FROM items').then(function(data) {
+
+    		//res.locals = data[0];
+    		res.send(data[0]);
+		});
+
+		//next()
+		// 	console.log("DATAAAAA", data);
+		// 	if(err) return res.status(404).send(err);
+	 	//res.send(Item.findAll({}));
+		// });
+	}
+
+}
 
 module.exports = dbController;
   // what does the sync method do?
