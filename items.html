@@ -1,0 +1,49 @@
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>Fame's Store</title>
+ <!-- comment out the below link tags when bundling styles with webpack -->
+ <!-- <link rel="stylesheet" href="client/stylesheets/styles.css"> -->
+</head>
+<body>
+ <h1>Fame's Store</h1>
+ <div id="root">
+	 <form method="POST" action="/addItem">
+		 <label>SELL ITEM</label><br>
+		 <div>
+		    <label for="name">NAME:</label>
+		    <input type="text" name="itemName">
+		  </div>
+		 <div>
+		    <label for="description">DESCRIPTION:</label>
+		    <input type="text" name="itemDescription">
+		  </div>
+		 <div>
+		    <label for="price">PRICE:</label>
+		    <input type="text" name="itemPrice">
+		  </div>
+		   <div>
+		    <label for="category">CATEGORY:</label>
+		    <input type="text" name="itemCategory">
+		  </div>
+		   <div>
+		    <label for="quantity">QUANTITY:</label>
+		    <input type="text" name="itemQuantity">
+		  </div>
+		  <div>
+		    <label for="condition">CONDITION:</label>
+		    <input type="text" name="itemCondition">
+		  </div>
+		   <input type="submit" value="ADD USER">
+	</form>
+ </div>
+
+
+ <!-- bundle for gulp build -->
+<!--  <script src="build/bundle.js"></script> -->
+
+ <!-- uncomment below and comment out the tag above for webpack challenge -->
+  <!--<script src="build/webpack-bundle.js"></script>-->
+
+</body>
+</html>
